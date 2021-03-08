@@ -2,6 +2,9 @@
     "name": "nickyeoman/php-validation-class",
     "type": "library",
     "description": "Validate, email, postal code, zipcode and phone numbers",
+    "require": {
+        "php": ">=5.6",
+    }
     "keywords": ["class","codeigniter","php","nickyeoman"],
     "homepage": "https://www.nickyeoman.com",
     "license": "CC0-1.0",
