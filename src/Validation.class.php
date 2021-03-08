@@ -1,11 +1,9 @@
 <?php
 /**
 * Validation Class
-* v4.0
+* v4.2
 * Last Updated: Mar 7, 2021
 * URL: https://www.nickyeoman.com/blog/php/php-validation-class/
-*
-* TODO: https://whoisryosuke.com/blog/2018/how-to-create-a-php-package-for-composer/
 *
 * Changelog:
 * v4 PHP8 support, GoPo Framework supported
@@ -14,7 +12,7 @@
 *
 **/
 
-namespace NickYeoman\phpValidationClass\Validation;
+namespace Nickyeoman\Validation;
 
 class Validate {
 

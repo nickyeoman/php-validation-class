@@ -14,6 +14,8 @@ https://packagist.org/packages/nickyeoman/php-validation-class
 GitHub:
 https://github.com/nickyeoman/php-validation-class
 
+
+
 ```
 $validate = new Validate;
 $validate->isEmail($email);

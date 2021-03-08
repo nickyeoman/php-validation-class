@@ -16,5 +16,11 @@
             "homepage": "https://www.nickyeoman.com",
             "role": "Developer"
         }
-    ]
+    ],
+    "autoload":
+        {
+          "psr-4": {
+            "Nickyeoman\\Validation\\": "."
+          }
+        }
 }
