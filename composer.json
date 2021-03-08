@@ -1,7 +1,7 @@
 {
     "name": "nickyeoman/php-validation-class",
     "description": "Validate, email, postal code, zipcode and phone numbers",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=7.0.0"
     },
