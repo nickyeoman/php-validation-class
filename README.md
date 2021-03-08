@@ -8,8 +8,16 @@ I recently had another project where it came in handy.
 Full Documentation here:
 https://www.nickyeoman.com/blog/php/php-validation-class/
 
+Packagist:
+https://packagist.org/packages/nickyeoman/php-validation-class
+
+GitHub:
+https://github.com/nickyeoman/php-validation-class
+
+```
 $validate = new Validate;
 $validate->isEmail($email);
 $validate->isPhone($phone);
 $validate->isPostalCode($postal);
 $validate->isZipCode($zip);
+```
