@@ -4,7 +4,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.0.0",
-        "nickyeoman/php-validation-class" : "dev-master"
+        "nickyeoman/php-validation-class" : "4.2"
     },
     "keywords": ["class","codeigniter","php","nickyeoman"],
     "homepage": "https://www.nickyeoman.com",
