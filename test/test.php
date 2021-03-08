@@ -19,8 +19,6 @@ foreach ($testClean as $value) {
     echo "Email: $value is bad\n";
   }
 
-}
-
 //TEST EMAILS
 $testEmails = ['good@email.com', 'alsogood@email.com', 'bad+email.com', 'not@nEmail,com'];
 
