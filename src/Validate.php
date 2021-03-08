@@ -3,7 +3,7 @@ namespace Nickyeoman\Validation;
 
 /**
 * Validation Class
-* v4.4
+* v4.5
 * Last Updated: Mar 8, 2021
 * URL: https://www.nickyeoman.com/blog/php/php-validation-class/
 *
