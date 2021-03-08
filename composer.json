@@ -3,8 +3,7 @@
     "description": "Validate, email, postal code, zipcode and phone numbers",
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.0.0",
-        "nickyeoman/php-validation-class" : "dev-master"
+        "php": ">=7.0 <8.1"
     },
     "keywords": ["class","codeigniter","php","nickyeoman"],
     "homepage": "https://www.nickyeoman.com",
