@@ -1,5 +1,5 @@
 {
-    "name": "nickyeoman/phpValidationClass",
+    "name": "nickyeoman/php-validation-class",
     "type": "library",
     "description": "Validate, email, postal code, zipcode and phone numbers",
     "keywords": ["class","codeigniter","php","nickyeoman"],
