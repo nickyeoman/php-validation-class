@@ -4,7 +4,7 @@
     "description": "Validate, email, postal code, zipcode and phone numbers",
     "keywords": ["class","codeigniter","php","nickyeoman"],
     "homepage": "https://www.nickyeoman.com",
-    "license": "CC0",
+    "license": "CC0-1.0",
     "authors": [
         {
             "name": "Nick Yeoman",
