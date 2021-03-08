@@ -1,0 +1,16 @@
+{
+    "name": "nickyeoman/phpValidationClass",
+    "type": "library",
+    "description": "Validate, email, postal code, zipcode and phone numbers",
+    "keywords": ["class","codeigniter","php","nickyeoman"],
+    "homepage": "https://www.nickyeoman.com",
+    "license": "CC0",
+    "authors": [
+        {
+            "name": "Nick Yeoman",
+            "email": "c@nickyeoman.com",
+            "homepage": "https://www.nickyeoman.com",
+            "role": "Developer"
+        }
+    ],
+}
