@@ -1,20 +1,23 @@
 # php-validation-class
 
-Nix ancient php Validation Class.
+I wrote this back on Oct 31 2009 when I was using CodeIgniter.
+I recently had new project where this came in handy so I brought it back to life.
+12 year old code, still not dead.
 
-I wrote this back in 2009 when I was using CodeIgniter.
-I recently had another project where it came in handy.
-
-Full Documentation here:
+### Full Documentation
 https://www.nickyeoman.com/blog/php/php-validation-class/
 
-Packagist:
+### Packagist
 https://packagist.org/packages/nickyeoman/php-validation-class
 
-GitHub:
+```
+composer require nickyeoman/php-validation-class
+```
+
+### GitHub
 https://github.com/nickyeoman/php-validation-class
 
-
+## Getting Started
 
 ```
 $validate = new Validate;
@@ -23,3 +26,7 @@ $validate->isPhone($phone);
 $validate->isPostalCode($postal);
 $validate->isZipCode($zip);
 ```
+
+## Testing
+
+I want to be sure this works, so I have a test kit for myself included.
