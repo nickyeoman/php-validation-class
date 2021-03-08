@@ -1,23 +1,27 @@
 <?php
 /**
 * Validation Class
-* v4.2
-* Last Updated: Mar 7, 2021
+* v4.3
+* Last Updated: Mar 8, 2021
 * URL: https://www.nickyeoman.com/blog/php/php-validation-class/
 *
 * Changelog:
 * v4 PHP8 support, GoPo Framework supported
 * v3 is easy to intergrate into CI as a library (renamed) + bug fixes
 * v2 now works with PHP 5.3 and up
-*
 **/
 
 namespace Nickyeoman\Validation;
 
 class Validate {
 
+  /**
+  * Takes the key (usually from POST)
+  * trims and strips html
+  * returns clean variable
+  **/
   public function clean($key){
-    $var = $_POST["$key"];
+    $var = $_POST["$key"] ?? $key;
     $stripped = trim(strip_tags($var));
 
     if ( empty($stripped) ) {
@@ -49,6 +53,8 @@ class Validate {
 
   /**
   * Check length
+  * if equal to or greater than length return true
+  * false if too short
   **/
   public function minLength($str1, $length) {
 

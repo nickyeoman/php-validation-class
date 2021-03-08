@@ -16,10 +16,7 @@
             "role": "Developer"
         }
     ],
-    "autoload":
-        {
-          "psr-4": {
-            "Nickyeoman\\Validation\\": "."
-          }
-        }
+    "autoload": {
+        "psr-4": { "Nickyeoman\\Validation\\": "src/" }
+    }
 }
