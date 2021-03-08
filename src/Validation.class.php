@@ -1,17 +1,17 @@
 <?php
+namespace Nickyeoman\Validation;
+
 /**
 * Validation Class
-* v4.3
+* v4.4
 * Last Updated: Mar 8, 2021
 * URL: https://www.nickyeoman.com/blog/php/php-validation-class/
 *
 * Changelog:
-* v4 PHP8 support, GoPo Framework supported
+* v4 PHP8 support, GoPo Framework supported, added namespace, composer support
 * v3 is easy to intergrate into CI as a library (renamed) + bug fixes
 * v2 now works with PHP 5.3 and up
 **/
-
-namespace Nickyeoman\Validation;
 
 class Validate {
 
