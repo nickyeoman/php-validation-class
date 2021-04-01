@@ -3,12 +3,13 @@ namespace Nickyeoman\Validation;
 
 /**
 * Validation Class
-* v4.5
+* v5.0.0
 * Last Updated: Mar 8, 2021
 * URL: https://www.nickyeoman.com/blog/php/php-validation-class/
 *
 * Changelog:
-* v4 PHP8 support, GoPo Framework supported, added namespace, composer support
+* v5 Added max length checker
+* v4 PHP8 support, NickYeoman Framework supported, added namespace, composer support
 * v3 is easy to intergrate into CI as a library (renamed) + bug fixes
 * v2 now works with PHP 5.3 and up
 **/
@@ -59,6 +60,21 @@ class Validate {
   public function minLength($str1, $length) {
 
     if( strlen($str1) >= $length) {
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+
+  /**
+  * Check length
+  * if equal to or greater than length return true
+  * false if too short
+  **/
+  public function maxLength($str1, $length) {
+
+    if( strlen($str1) <= $length) {
       return true;
     } else {
       return false;
