@@ -190,5 +190,31 @@ class Validate {
     }
   }
 
+  /**
+  * Contains spammy words
+  * spammy words should be csv
+  **/
+  public function checkSpam($content = '', $spammywords = 'viagra,cialis') {
+
+    $spamarry = array_map('trim', explode(",", strtolower($spammywords)) ); //strtolower, trim spaces, put in array
+    $checkme = strtolower(trim($content));
+    $wordsfound = '';
+
+    foreach ($spamarry as $v){
+      if ( strpos($checkme, $v) ) {
+        $wordsfound .= "$v ";
+      }
+    }
+
+    trim($wordsfound);
+
+    if (empty($wordsfound)) {
+      return false; //no bad words
+    } else {
+      return $wordsfound; // bad words
+    }
+  }
 }
+//end checkSpam
+
 /** End Validation **/
