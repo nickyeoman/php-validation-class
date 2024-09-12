@@ -3,11 +3,12 @@ namespace Nickyeoman\Validation;
 
 /**
 * Validation Class
-* v5.0.0
-* Last Updated: Mar 8, 2021
-* URL: https://www.nickyeoman.com/blog/php/php-validation-class/
+* v6.0.0
+* Last Updated: September 12, 2024
+* URL: https://github.com/nickyeoman/php-validation-class
 *
 * Changelog:
+* v6 Added some better error checking
 * v5 Added max length checker
 * v4 PHP8 support, NickYeoman Framework supported, added namespace, composer support
 * v3 is easy to intergrate into CI as a library (renamed) + bug fixes
@@ -17,20 +18,12 @@ namespace Nickyeoman\Validation;
 class Validate {
 
   /**
-  * Takes the key (usually from POST)
-  * trims and strips html
+  * Trims and strips html
   * returns clean variable
   **/
-  public function clean($key){
-    $var = $_POST["$key"] ?? $key;
-    $stripped = trim(strip_tags($var));
-
-    if ( empty($stripped) ) {
-      return false;
-    } else {
-      return $stripped;
-    }
-
+  public function clean($var)
+  {
+      return trim(strip_tags($var)) ?: null; 
   }
 
   /**
@@ -39,6 +32,8 @@ class Validate {
   * $email is the email address
   **/
   public function isEmail($email) {
+
+    $email = $this->clean($email);
 
     //email is not case sensitive make it lower case
     $email =  strtolower($email);
@@ -54,13 +49,20 @@ class Validate {
 
   /**
   * Check length
-  * if equal to or greater than length return true
+  * if equal to or greater than length returns strlen
   * false if too short
   **/
   public function minLength($str1, $length) {
 
-    if( strlen($str1) >= $length) {
-      return true;
+    if (!is_int($length)) {
+      throw new InvalidArgumentException('Validation Class: Length must be an integer. minLength(string, number)');
+    }
+
+    $str1 = $this->clean($str1);
+    $count = strlen($str1);
+
+    if( $count >= $length) {
+      return $count;
     } else {
       return false;
     }
@@ -84,9 +86,10 @@ class Validate {
 
   /**
   * Checks that two paramters match
-  *
   **/
   public function isMatch($term1, $term2) {
+    $this->clean($term1);
+    $this->clean($term2);
 
     if ($term1 == $term2) {
       return true;
@@ -103,6 +106,8 @@ class Validate {
   * $ext if set to true return an array with extension separated
   **/
   public function isPhone($phone, $ext = false) {
+
+    $phone = $this->clean($phone);
 
     //remove everything but numbers
     $numbers = preg_replace("%[^0-9]%", "", $phone );
@@ -158,6 +163,9 @@ class Validate {
   * thanks to: https://roshanbh.com.np/2008/03/canda-postal-code-validation-php.html
   **/
   public function isPostalCode($postal) {
+
+    $postal = $this->clean($postal);
+
     $regex = "/^([a-ceghj-npr-tv-z]){1}[0-9]{1}[a-ceghj-npr-tv-z]{1}[0-9]{1}[a-ceghj-npr-tv-z]{1}[0-9]{1}$/i";
 
     //remove spaces
@@ -177,6 +185,9 @@ class Validate {
   * returns clean zip
   **/
   public function isZipCode($zip) {
+
+    $zip = $this->clean($zip);
+
     //remove everything but numbers
     $numbers = preg_replace("[^0-9]", "", $zip );
 

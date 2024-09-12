@@ -1,32 +1,37 @@
-# php-validation-class
+# PHP Validation Class
 
-I wrote this back on Oct 31 2009 when I was using CodeIgniter.
-I recently had new project where this came in handy so I brought it back to life.
-12 year old code, still not dead.
+A simple yet effective validation class written in PHP.
+
+## Introduction
+
+Originally created on October 31, 2009, using CodeIgniter, this class has been revived to meet the needs of numerous projects. 
+
 
 ### Full Documentation
-https://www.nickyeoman.com/blog/php/php-validation-class/
+
+Github: https://github.com/nickyeoman/php-validation-class
 
 ### Packagist
-https://packagist.org/packages/nickyeoman/php-validation-class
+
+Composer: https://packagist.org/packages/nickyeoman/php-validation-class
 
 ```
 composer require nickyeoman/php-validation-class
 ```
 
-### GitHub
-https://github.com/nickyeoman/php-validation-class
+#### Usage
 
-## Getting Started
-
+Include the class in your project.
+```php
+USE Nickyeoman\Validation;
+$validate = new Nickyeoman\Validation\Validate();
 ```
+
+And use:
+```php
 $validate = new Validate;
 $validate->isEmail($email);
 $validate->isPhone($phone);
 $validate->isPostalCode($postal);
 $validate->isZipCode($zip);
 ```
-
-## Testing
-
-I want to be sure this works, so I have a test kit for myself included.
